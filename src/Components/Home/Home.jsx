@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import './Home.scss';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-import {BiPlay} from 'react-icons/bi'
+import {BiColor, BiPlay} from 'react-icons/bi'
 import {AiOutlinePlus} from 'react-icons/ai'
 const url = "https://api.themoviedb.org/3";
 const apiKey = "4a3dd7fdbc560c24923aa2f0dea1af00";
@@ -112,6 +112,9 @@ const Home = () => {
         {genre.map((item)=> (
             <Link key={item.id} to={`/genre/${item.id}`}>{item.name}</Link>
         ))}
+    </div>
+    <div style={{backgroundColor:"black"}}>
+        <center style={{color: "white",padding:"20px 0 20px 0",width:"100%"}} >Developed by @Vibek Mandal</center>
     </div>
     
    </section>
